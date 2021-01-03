@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Urban Life</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Georgia_State_Athletics_logo.svg.png">
+</head>
+<body>
+    <a href="https://www.gsu.edu/"><img src="gsubanner.jpg" id="banner"></a>
+    <h1>Urban Life Building</h1>
+    <img src="urbanlifepic.jpg" class="pic">
+    <p>
+        The Urban Life Building houses classrooms that are usually reserved for first- and second-year undergraduate students. It can be found next door to the Sports Arena.
+        Entrances can be found at street level. Most classrooms can be found on the same level as the entrance.
+        Refer to the map below for its location and directions!
+    </p>
+    <div id="googleMap" style="width:50%;height:400px;"></div>
+
+<script>
+    function myMap() {
+        var myLatLng = {lat: 33.75220858339016, lng: -84.38566963122335};
+        var mapProp= {
+            center: myLatLng,
+            zoom:18,
+        };
+        var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+        var marker = new google.maps.Marker({
+            position: myLatLng,
+            label: "Urban Life Bldg GSU",
+            animation: google.maps.Animation.DROP,
+            icon: {
+                url: "Georgia_State_Athletics_logo.svg.png",
+                scaledSize: new google.maps.Size(50, 50),
+                labelOrigin: new google.maps.Point(115,28),
+                origin: new google.maps.Point(0,0),
+                anchor: new google.maps.Point(11,40)
+            }
+        });
+        marker.setMap(map);
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+</body>
+</html>

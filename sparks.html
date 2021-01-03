@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sparks Hall</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Georgia_State_Athletics_logo.svg.png">
+</head>
+<body>
+    <a href="https://www.gsu.edu/"><img src="gsubanner.jpg" id="banner"></a>
+    <h1>Sparks Hall</h1>
+    <img src="sparkspic.jpg" class="pic">
+    <p>
+        Sparks Hall houses both classrooms and administrative offices essential to the university and its students. Most entrances can be found either at street level, or connected to the student center.
+        Classrooms and offices, such as those for Financial Aid, can be found on the same floor as the entrances.
+        Refer to the map below for its location and directions!
+    </p>
+    <div id="googleMap" style="width:50%;height:400px;"></div>
+
+<script>
+    function myMap() {
+        var myLatLng = {lat: 33.75307530620669, lng: -84.38587889740768};
+        var mapProp= {
+            center: myLatLng,
+            zoom:18,
+        };
+        var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+        var marker = new google.maps.Marker({
+            position: myLatLng,
+            label: "Sparks Hall GSU",
+            animation: google.maps.Animation.DROP,
+            icon: {
+                url: "Georgia_State_Athletics_logo.svg.png",
+                scaledSize: new google.maps.Size(50, 50),
+                labelOrigin: new google.maps.Point(25,60),
+                origin: new google.maps.Point(0,0),
+                anchor: new google.maps.Point(11,40)
+            }
+        });
+        marker.setMap(map);
+    }
+</script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+</body>
+</html>

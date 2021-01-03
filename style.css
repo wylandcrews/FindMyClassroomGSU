@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+body {
+    background-color: #0039A6;
+    font-family: "Open Sans";
+}
+h1 {
+    text-align: center;
+    color: #FFFFFF;
+    margin: auto;
+    overflow: auto;
+    text-shadow: 3px 3px 3px #000000;
+    font-size: 48px;
+}
+h2 {
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 3px 3px 3px #000000;
+}
+p {
+    color: #FFFFFF;
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+label {
+    color: #FFFFFF;
+}
+form {
+    margin: 0 auto;
+    width: 15%;
+}
+#banner, #googleMap {
+    display: block;
+    margin: auto;
+    border: black solid 5px;
+}
+.pic {
+    display: block;
+    margin: auto;
+    border: black solid 5px;
+    width: 50%;
+}
+
+

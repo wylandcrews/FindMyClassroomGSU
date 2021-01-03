@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Find My Classroom</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Georgia_State_Athletics_logo.svg.png">
+</head>
+<body>
+    <a href="https://www.gsu.edu/"><img src="gsubanner.jpg" id="banner"></a>
+    <h1>Find My Classroom</h1>
+    <p>
+        One of the most daunting obstacles college presents, other than the coursework, is figuring out where you need to go!
+        A map can be helpful, but also confusing.<br>
+        The only thing you need is your schedule! Refer to the list below and find your classroom!
+    </p>
+    <h2>Select your building as it appears on your schedule:</h2>
+    <form name="myForm" onsubmit="return process();" method="post">
+        <label>Select your building:</label><br>
+        <select name="bldg" id="bldg">
+            <option value="Aderhold">Aderhold (ADHOLD)</option>
+            <option value="CLSO">Classroom South (CLSO)</option>
+            <option value="LANGDL">Langdale Hall (LANGDL)</option>
+            <option value="NSC">Natural Science Center (NSC)</option>
+            <option value="Petit">Petit Science Center (PETIT)</option>
+            <option value="Sparks">Sparks Hall</option>
+            <option value="URBAN">Urban Life (URBAN)</option>
+        </select>
+        <input type="submit" value="Find it!">
+    </form>
+    <img src="gsumap.jpg" class="pic">
+    <script src="process.js"></script>
+</body>
+</html>

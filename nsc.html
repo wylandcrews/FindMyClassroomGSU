@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NSC</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Georgia_State_Athletics_logo.svg.png">
+</head>
+<body>
+    <a href="https://www.gsu.edu/"><img src="gsubanner.jpg" id="banner"></a>
+    <h1>Natural Science Center</h1>
+    <img src="nscpic.jpg" class="pic">
+    <p>
+        The Natural Science Center can be found down the street from Langdale Hall and the Classroom South building. Unlike most of the main university buildings, there is only one entrance.
+        This is to restrict and regulate traffic, as students and staff must present proper documentation to enter. Most classrooms can be found on the same floor as the entrance.
+        Refer to the map below for its location and directions!
+    </p>
+    <div id="googleMap" style="width:50%;height:400px;"></div>
+
+<script>
+    function myMap() {
+        var myLatLng = {lat: 33.75363929193126, lng: -84.38825365205223};
+        var mapProp= {
+            center: myLatLng,
+            zoom:18,
+        };
+        var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+        var marker = new google.maps.Marker({
+            position: myLatLng,
+            label: "Natural Science Center GSU",
+            animation: google.maps.Animation.DROP,
+            icon: {
+                url: "Georgia_State_Athletics_logo.svg.png",
+                scaledSize: new google.maps.Size(50, 50),
+                labelOrigin: new google.maps.Point(135,27),
+                origin: new google.maps.Point(0,0),
+                anchor: new google.maps.Point(11,40)
+            }
+        });
+        marker.setMap(map);
+    }
+</script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+</body>
+</html>

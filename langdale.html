@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Langdale</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Georgia_State_Athletics_logo.svg.png">
+</head>
+<body>
+    <a href="https://www.gsu.edu/"><img src="gsubanner.jpg" id="banner"></a>
+    <h1>Langdale Hall</h1>
+    <img src="langdalepic.jpg" class="pic">
+    <p>
+        Langdale Hall can be found near many other main university buildings, like the Library and Classroom South. Most of the buildings entrances are one floor above street level.
+        Classrooms can be found on the floor of most entrances (the 2nd floor) and the floors above.
+        Refer to the map below for its location and directions!
+    </p>
+    <div id="googleMap" style="width:50%;height:400px;"></div>
+
+<script>
+    function myMap() {
+        var myLatLng = {lat: 33.75345272843185, lng: -84.38715438631688};
+        var mapProp= {
+            center: myLatLng,
+            zoom:18,
+        };
+        var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+        var marker = new google.maps.Marker({
+            position: myLatLng,
+            label: "Langdale Hall GSU",
+            animation: google.maps.Animation.DROP,
+            icon: {
+                url: "Georgia_State_Athletics_logo.svg.png",
+                scaledSize: new google.maps.Size(50, 50),
+                labelOrigin: new google.maps.Point(25,-10),
+                origin: new google.maps.Point(0,0),
+                anchor: new google.maps.Point(11,40)
+            }
+        });
+        marker.setMap(map);
+    }
+</script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+</body>
+</html>
+
